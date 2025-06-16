@@ -5,10 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umhaefer Tomato Sauce</title>
     <link rel="stylesheet" href="../styles.css">
+<style>
+    dialog{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #modalDiv{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0
+    }
+</style>
+
 </head>
 <body class="recipe-page">
-    <div class="header"><a href="../index.html">Home</a></div>
-    <div class="recipe-img"><img src="../images/Placeholder.jpg" width = "806px" height = "605px" alt = "Image of very delicious tomato sauce"></div>
-    
+    <div class="header">
+        <a href="../index.html">Home</a>
+        <a href="./tomato-sauce.html" style="margin-left: auto;"><b>Tomato Sauce</b></a>
+        <a href="./brownies.html">Brownies</a>
+        <a href="#">Stuffing</a>
+    </div>
+    <div class="img-container"><img src="../images/Sauce.jpeg" alt = "Image of very delicious tomato sauce"></div>
+    <div class="written-recipe">
+        <p>There aren't many people in the world who don't appreciate Italian food, and pasta, like pizza, is up there at the top. This is the tomato sauce I grew up with, and to this day, there isn't anything that can compete with it in flavor, richness, or texture.</p>
+        <h2>Ingredients:</h2>
+        <p>(<b>Note:</b> You will need a 3 or 4 quart heavy saucepan. Recipe serves 4 people.)</p>
+        <ul>
+            <li>2x 28oz cans San Marzano whole tomatoes. (<b>Note:</b> look for the official <a id='open-seal' style="color:blue; text-decoration: underline;">San Marzano seal.</a>)</li>
+            <dialog id = "marzano-seal">
+            <div id = 'modalDiv'>
+                <h1 id = 'close-seal' style = "text-align: right; margin: 4px; padding: 4px; cursor: pointer">&#10006;</h1>
+                <img src = "../images/san_marzano.jpeg" alt = "Official San Marzano Seal" style="max-width: 100%">
+            </div>
+            </dialog>
+            <script>
+                const openSeal = document.getElementById('open-seal');
+                const dialog = document.getElementById('marzano-seal');
+                const closeSeal = document.getElementById('close-seal');
+                const modalDiv = document.getElementById('modalDiv');
+                openSeal.addEventListener('click', () => dialog.showModal());
+                closeSeal.addEventListener('click', () => dialog.close());
+                dialog.addEventListener('click', () => dialog.close());
+            </script>
+            <li>1 medium onion, diced</li>
+            <li>2 tbsp olive oil</li>
+            <li><sup>1</sup>&frasl;<sub>2</sub> tsp oregano</li>
+            <li><sup>1</sup>&frasl;<sub>2</sub> tsp thyme</li>
+            <li><sup>1</sup>&frasl;<sub>2</sub> tsp basil</li>
+            <li><sup>1</sup>&frasl;<sub>2</sub> tsp crushed rosemary</li>
+            <li>2 cloves garlic, minced</li>
+            <li>2 tbsp tomato paste</li>
+            <li>Salt and pepper, to taste.</li>
+            <li>2 pinches of red pepper flakes</li>
+        </ul>
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Empty whole tomatoes into a large mixing bowl. Remove and discard skin and caps from each tomato.</li>
+            <li>Crush tomatoes by hand for chunkier sauce or use immersion blender for smoother sauce. <b>Make sure there are no skins or caps left.</b></li>
+            <li>Heat olive oil in saucepan on medium heat.</li>
+            <li>Generously salt the onion and add a pinch of pepper before adding to the heated pan.</li>
+            <li>Stir with wooden spoon until onions are soft (4-6 minutes)</li>
+            <li>Add spices.</li>
+            <li>Add minced garlic and stir for 1-3 minutes, dropping to medium-low heat; do not let garlic burn.</li>
+            <li>Add tomatoes to pan, keep stirring until onions and garlic are incorporated.</li>
+            <li>Add tomato paste and partially cover the pan. Let it simmer for 40 minutes.</li>
+            <ul><li>You can use an immersion blender now if you didn't do so before and desire a smoother sauce.</li></ul>
+            <li>Add salt, pepper to taste. You can also add any extra italian herbs at this point if you want more.</li>
+        </ol>
+    </div>
 </body>
 </html>
